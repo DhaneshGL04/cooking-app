@@ -1,0 +1,516 @@
+.nav-custom {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  .container-fluid {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 50px;
+
+    .navbar-nav {
+      align-items: center;
+    }
+
+    #navbarNav {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0;
+      /* Prevents the collapse from growing to fill available space */
+      flex-basis: auto;
+      /* Makes the collapse take the size of its content */
+
+      h1 {
+        font-family: "Caveat";
+        font-size: 70px;
+      }
+    }
+
+    .nav-item {
+      margin: 30px 10px;
+
+      .btn {
+        background-color: #5c7061;
+        /* Transparent background */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        margin: 0 8px;
+        font-size: 1rem;
+        transition: color 0.3s ease, background-color 0.3s ease;
+      }
+
+      .btn:hover,
+      .btn:focus {
+        background-color: #444;
+      }
+
+      .dropdown-item {
+        font-weight: 400;
+        font-size: 0.875rem;
+      }
+
+    }
+  }
+}
+
+
+.recipe-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Caveat";
+    align-items: center;
+  }
+
+  input {
+    width: 40%;
+    margin: 10px auto 20px auto;
+  }
+
+
+  .recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .card-custom {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  .card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .card-text {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #5c7061;
+    border-color: #5c7061;
+  }
+
+  .btn:focus,
+  .btn:hover {
+    border: 2px;
+    background-color: #5c7061;
+    color: white;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+/* Base styles for login and register containers */
+.login-container,
+.register-container {
+  margin: 30px;
+  text-align: center;
+  font-family: "Caveat";
+}
+
+/* Headings in the containers */
+.login-container h2,
+.register-container h2 {
+  font-size: 30px;
+  letter-spacing: 0;
+}
+
+/* Form and paragraph styling */
+.login-container form,
+.register-container form,
+.login-container p,
+.register-container p {
+  min-width: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* Input, button, and textarea styling within forms */
+.login-container form input,
+.login-container form button,
+.login-container form textarea,
+.register-container form input,
+.register-container form button,
+.register-container form textarea {
+  margin: 10px 0;
+  font-family: sans-serif;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+/* Styling for form buttons (excluding the toggle button) */
+.login-container form button,
+.register-container form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 30px 8px;
+  font-size: 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  background-color: #5c7061;
+  color: white;
+}
+
+/* New styling for the password input container */
+.password-input-container {
+  position: relative;
+  text-align: left;
+  /* Override parent's centered text */
+  width: 100%;
+  /* Ensure it takes up full width of the form (400px) */
+}
+
+/* Styling for the "Show Password" toggle button */
+.toggle-password-btn {
+  position: absolute;
+  right: 5px;
+  /* top: 50%; */
+  transform: translateY(-60%);
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5c7061;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 2;
+  /* Ensure it sits above the input text */
+}
+
+.toggle-password-btn:hover {
+  background-color: #444;
+}
+
+.error-message {
+  color: red;
+  font-size: .9rem;
+  margin-top: 5px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Align error message to the left */
+}
+
+
+.add-recipe-container,
+.edit-recipe-container {
+  margin: 30px;
+  text-align: center;
+
+
+  h2 {
+    font-size: 2rem;
+    font-family: 'Caveat';
+    margin-bottom: 20px;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    button {
+      margin-top: 10px;
+      margin-bottom: 100px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      margin: 30px 8px;
+      font-size: 1rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      background-color: #5c7061;
+      color: white;
+    }
+  }
+
+  p {
+    min-width: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+  }
+
+  .input-container {
+    margin-bottom: 20px;
+
+
+    label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #333;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      transition: all 0.3s ease;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 0.9rem;
+      background-color: #f9f9f9;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #007bff;
+      background-color: #fff;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: 10px;
+      margin-bottom: 100px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      margin: 30px 8px;
+      font-size: 1rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      background-color: #5c7061;
+      color: white;
+    }
+
+
+  }
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.recipe-detail-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
+  align-items: flex-start;
+
+  /* Left Side: Image */
+  .recipe-image-container {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: sticky;
+    height: auto;
+  }
+
+  .recipe-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+
+  /* Right Side: Details (Title, Ingredients, Directions) */
+  .recipe-details-container {
+    flex: 2.5;
+
+  }
+
+  .recipe-title {
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: "Caveat";
+  }
+
+  .contributor {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 20px;
+  }
+
+  .ingredients,
+  .directions {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 5px;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  ul li,
+  ol li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #5c7061;
+    padding-left: 15px;
+    border-radius: 4px;
+  }
+
+  .recipe-details-container ol {
+    counter-reset: step-counter;
+  }
+
+  .recipe-details-container ol li {
+    position: relative;
+    padding-left: 37px;
+  }
+
+  .recipe-details-container ol li:before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #5c7061;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.9rem;
+  }
+}
+
+.myrecipe-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.myrecipe-container {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 0;
+    font-family:
+      'Caveat';
+  }
+
+  .card-custom {
+    width: 30%;
+    margin: 17px;
+  }
+
+  .card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .btn {
+    margin: 0 5px;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background-color: #5c7061;
+    color: white;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .empty-state-text {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-family: Arial;
+
+  }
+}
